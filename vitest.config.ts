@@ -3,7 +3,16 @@ import tsconfigPaths from "vite-tsconfig-paths";
 import dts from "vite-plugin-dts";
 
 export default defineConfig({
-  plugins: [tsconfigPaths(), dts()],
+  plugins: [
+    tsconfigPaths(),
+    dts({
+      entryRoot: "src",
+      outDir: "dist",
+      insertTypesEntry: true, // creates dist/index.d.ts that re-exports your types
+      tsconfigPath: "./tsconfig.json",
+      include: ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue", "src/**/*.d.ts"],
+    }),
+  ],
   build: {
     lib: {
       entry: "./src/index.ts",

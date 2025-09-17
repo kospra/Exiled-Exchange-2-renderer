@@ -25,7 +25,13 @@ export default defineConfig({
         },
       },
     }),
-    dts(),
+    dts({
+      entryRoot: "src",
+      outDir: "dist",
+      insertTypesEntry: true, // creates dist/index.d.ts that re-exports your types
+      tsconfigPath: "./tsconfig.json",
+      include: ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue", "src/**/*.d.ts"],
+    }),
   ],
   resolve: {
     alias: {
