@@ -148,7 +148,7 @@ export interface Config {
   overlayAlwaysClose: boolean;
   enableAlphas: boolean;
   alphas: [];
-  tipsFrequency: TipsFrequency;
+  tipsFrequency: (typeof TipsFrequency)[keyof typeof TipsFrequency];
 }
 
 export const defaultConfig = (): Config => ({
