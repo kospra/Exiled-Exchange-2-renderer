@@ -1,8 +1,16 @@
 import { defineConfig } from "vitest/config";
 import tsconfigPaths from "vite-tsconfig-paths";
+import dts from "vite-plugin-dts";
 
 export default defineConfig({
-  plugins: [tsconfigPaths()],
+  plugins: [tsconfigPaths(), dts()],
+  build: {
+    lib: {
+      entry: "./index.ts",
+      name: "ExiledExchange2Parser",
+      fileName: (format) => `index.${format}.js`,
+    },
+  },
   test: {
     includeSource: ["src/**/*.{js,ts}"],
     globals: true,
