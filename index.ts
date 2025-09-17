@@ -1,0 +1,1 @@
+export {parseClipboard, type ParsedItem} from "./src/parser";
