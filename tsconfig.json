@@ -13,7 +13,7 @@
     "sourceMap": true,
     "paths": {
       "@/*": ["./src/*"],
-      "@ipc/*": ["../ipc/*"],
+      "@ipc/*": ["./ipc/*"],
       "@specs/*": ["./specs/*"]
     },
     "types": ["vite/client", "vitest/importMeta"],

@@ -7,6 +7,11 @@ export default defineConfig({
   build: {
     target: "esnext",
     assetsInlineLimit: 0,
+    lib: {
+      entry: "./index.ts",
+      name: "ExiledExchange2Parser",
+      fileName: (format) => `index.${format}.js`,
+    },
   },
   optimizeDeps: {
     esbuildOptions: { target: "esnext" },
@@ -23,7 +28,7 @@ export default defineConfig({
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
-      "@ipc": path.resolve(__dirname, "./src/../../ipc"),
+      "@ipc": path.resolve(__dirname, "./src/../ipc"),
       "@specs": path.resolve(__dirname, "./specs"),
     },
   },
