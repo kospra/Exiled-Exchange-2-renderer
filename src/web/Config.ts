@@ -112,14 +112,14 @@ export function poeWebApi() {
   }
 }
 
-export const enum TipsFrequency {
-  Always = 1,
-  MoreOften = 2,
-  Normal = 3,
-  Rarely = 4,
-  VeryRarely = 5,
-  Never = 6,
-}
+export const TipsFrequency = {
+  Always: 1,
+  MoreOften: 2,
+  Normal: 3,
+  Rarely: 4,
+  VeryRarely: 5,
+  Never: 6,
+};
 
 export interface Config {
   configVersion: number;
