@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [tsconfigPaths(), dts()],
   build: {
     lib: {
-      entry: "./index.ts",
+      entry: "./src/index.ts",
       name: "ExiledExchange2Parser",
       fileName: (format) => `index.${format}.js`,
     },

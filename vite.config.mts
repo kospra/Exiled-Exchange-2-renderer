@@ -9,7 +9,7 @@ export default defineConfig({
     target: "esnext",
     assetsInlineLimit: 0,
     lib: {
-      entry: "./index.ts",
+      entry: "./src/index.ts",
       name: "ExiledExchange2Parser",
       fileName: (format) => `index.${format}.js`,
     },
